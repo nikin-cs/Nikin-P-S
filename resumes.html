@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nikin P S | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #020617;
+      --card: #020617;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #020617, #000);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      animation: fadeDown 1.2s ease forwards;
+    }
+
+    header p {
+      margin-top: 15px;
+      color: var(--muted);
+      animation: fadeUp 1.5s ease forwards;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 30px;
+      color: var(--accent);
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      width: 40px;
+      height: 2px;
+      background: var(--accent);
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+    }
+
+    .about p {
+      max-width: 800px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #020617, #000);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 24px;
+      border-radius: 16px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 20px 40px rgba(56,189,248,0.15);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #7dd3fc;
+    }
+
+    .card p, .card li {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    ul { margin-left: 18px; }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      margin: 0 12px;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>&lt; Nikin P S /&gt;</h1>
+  <p>Computer Science Engineer · Full‑Stack Enthusiast</p>
+</header>
+
+<section class="about">
+  <h2>About</h2>
+  <p>
+    I’m a Computer Science Engineering student who enjoys building scalable, clean, and efficient web applications. I focus on writing readable code, learning modern tech stacks, and solving real‑world problems.
+  </p>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card"><h3>Languages</h3><p>C · C++ · Java · Python</p></div>
+    <div class="card"><h3>Web</h3><p>HTML · CSS · JavaScript</p></div>
+    <div class="card"><h3>Backend</h3><p>Node.js · REST APIs</p></div>
+    <div class="card"><h3>Database</h3><p>MySQL · MongoDB</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>E‑Commerce Platform</h3>
+      <ul>
+        <li>Built full‑stack web application</li>
+        <li>MongoDB based data storage</li>
+        <li>Node.js backend with REST APIs</li>
+        <li>Responsive & minimal UI</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <ul>
+        <li>Minimal developer‑focused UI</li>
+        <li>CSS animations & transitions</li>
+        <li>Mobile‑first responsive design</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Internship</h2>
+  <div class="card">
+    <h3>NDV TechSys Solutions</h3>
+    <p>June 2025 – July 2025</p>
+    <p>
+      Worked on a full‑stack e‑commerce system focusing on backend logic, UI responsiveness, and database integration using modern web tools.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <div class="card">
+    <p>📍 Tirunelveli, Tamil Nadu</p>
+    <p>📧 nikinps.in@gmail.com</p>
+    <p>📞 +91‑9150111666</p>
+  </div>
+</section>
+
+<footer>
+  <p>
+    <a href="#">LinkedIn</a> · <a href="#">GitHub</a>
+  </p>
+  <p>© 2026 Nikin P S</p>
+</footer>
+
+<script>
+  const cards = document.querySelectorAll('.card');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  cards.forEach(card => observer.observe(card));
+</script>
+
+</body>
+</html>
